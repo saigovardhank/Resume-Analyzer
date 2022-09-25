@@ -1,0 +1,37 @@
+<form class="container" action="">
+    <div>
+        <div class="label">Roles 
+            <button id="plusBtn" mat-mini-fab (click)="onPlus()">+</button>
+        </div>
+        <input class="roleInputs" *ngFor="let k of array();let i=index" type="text" [name]="'role'+i" [id]="'role'+i">
+        <button mat-mini-fab (click)="reduce()"><mat-icon>delete</mat-icon></button>
+    </div>
+    <div>
+        <label class="label" for="upload">Upload Resume:</label>
+        <input name="upload" required type="file" (change)="onChange($event)">
+        <p>OR</p>
+        <div>
+            <label class="label" for="textResume">Type in your Resume</label>
+            <input type="checkbox" name="expandSpace" id="expandSpace" [checked]="expandSpace" (change)="expandSpace = !expandSpace">
+        </div>
+    </div>
+    <div *ngIf="expandSpace">
+        <textarea name="textResume" id="textResume" cols="160" rows="100"></textarea>
+    </div>
+    <button (click)="onUpload()" type="submit"
+        class="submit">
+        Analyze
+    </button>
+</form>
+
+<!-- Shareable short link of  uploaded file -->
+<div class="container text-center jumbotron"
+    *ngIf="shortLink">
+    <h2> Visit Here</h2>
+    <a href="{{shortLink}}">{{shortLink}}</a>
+</div>
+
+<!--Flag variable is used here-->
+<div class="container" *ngIf="loading">
+    <h3>Loading ...</h3>
+</div>

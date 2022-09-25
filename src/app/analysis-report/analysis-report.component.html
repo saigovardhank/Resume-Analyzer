@@ -1,0 +1,18 @@
+<div class="container py-4">
+    <h1>Analysis Report</h1>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>Required skillset Satisfactory Level for job description</h3>
+        <ul>
+          <li *ngFor="let skill of skills" class="skills">{{ skill.name }} <mat-progress-bar mode="determinate" [value]="skill.value"></mat-progress-bar></li>
+        </ul>
+      </div>
+      <div class="col-sm-6">
+        <h3>Suggestions</h3>
+        <ul class="links">
+          <li *ngFor="let link of links"><a [href]="link.url" [title]="link.url">{{ link.name }} - <i>{{ link.topic }}</i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>

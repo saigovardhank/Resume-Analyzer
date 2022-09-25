@@ -1,0 +1,40 @@
+form>div {
+    padding: 10px;
+    padding-left: 0;
+}
+.label {
+    padding-right: 5px;
+    font-weight: bold;
+}
+.submit {
+    background-color: darkblue;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+.uploadDiv {
+    padding: 70 0;
+    text-align: center;
+}
+
+#textResume {
+    overflow: scroll;
+}
+#plusBtn {
+    display: inline-block;
+    font-weight: bolder;
+    font-size: x-large;
+    /* color: tomato; */
+}
+.roleInputs {
+    margin-right: 5px;
+}

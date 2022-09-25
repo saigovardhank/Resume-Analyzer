@@ -1,0 +1,14 @@
+h1 {
+    text-align: center;
+}
+.cursorPointer{
+    cursor: pointer;
+}
+
+.options {
+    text-transform: capitalize;
+}
+
+.container-fluid {
+    margin: 3%;
+}
